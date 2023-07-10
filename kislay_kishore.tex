@@ -50,21 +50,24 @@
 }
 
 \newcommand{\resumeSubheading}[4]{
-  \vspace{-1pt}\item
+  \vspace{-1pt}\item[]
     \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
       \textbf{#1} & #2 \\
       \textit{\small#3} & \textit{\small #4} \\
     \end{tabular*}\vspace{-5pt}
 }
 
-\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+\newcommand{\resumeSubItemListStart}{\begin{itemize}\vspace{5pt}}
+\newcommand{\resumeSubItemListEnd}{\end{itemize}\vspace{-5pt}}
+\newcommand{\resumeSubItem}[1]{\item {#1}}
+
 
 \renewcommand{\labelitemii}{$\circ$}
 
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
-\newcommand{\resumeItemListStart}{\begin{itemize}}
-\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+\newcommand{\resumeItemListStart}{\begin{enumerate}}
+\newcommand{\resumeItemListEnd}{\end{enumerate}\vspace{-5pt}}
 
 %-------------------------------------------
 %%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -74,65 +77,49 @@
 
 %----------HEADING-----------------
 \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-  \textbf{\Large Kislay Kishore} & Email : \href{mailto:kislay.kishore2003@gmail.com}{kislay.kishore2003@gmail.com}\\
-  GitHub: \href{https://github.com/kislaykishore}{github.com/kislaykishore}& Mobile : +91-9000416896 \\
+	\textbf{\Large Kislay Kishore} & Email : \href{mailto:kislay.kishore2003@gmail.com}{kislay.kishore2003@gmail.com}\\
+	GitHub: \href{https://github.com/kislaykishore}{github.com/kislaykishore}& Mobile : +91-9000416896 \\
 \end{tabular*}
-
-
-%-----------EDUCATION-----------------
-\section{Education}
-  \resumeSubHeadingListStart
-    \resumeSubheading
-      {National Institute of Technology }{Warangal, India}
-      {Bachelor of Technology in Computer Science and Engineering; CGPA: 9.17/10}{July 2008 -- April 2012}
-  \resumeSubHeadingListEnd
 
 
 %-----------EXPERIENCE-----------------
 \section{Experience}
   \resumeSubHeadingListStart
     \resumeSubheading
-      {Google India Pvt Ltd}
+      {Google}
       {Bengaluru, India}{Tech Lead/Software Engineer}{September 2019 -- Present}
-      \resumeItemListStart
-        \resumeItem{SWE, Frontend}
-       {Integrated Google app with OEMs like Samsung, OnePlus, Vivo that made Google Discover just a swipe away on the homescreen(\href{https://www.xda-developers.com/oneplus-launcher-4-5-6-adds-toggle-between-google-discover-oneplus-shelf/}{XDA link}). Took complete ownership of the solution and collaborated with the OEMs to take the project to completion. This project helped land Google Discover on 219 million devices/year.}
-       \resumeItem{SWE, Machine Learning}
-       {Solved the procrastination problem in LaMDA, a conversational AI model like ChatGPT with an ROC AUC of 0.988. Worked on data-collection and BERT finetuning.}
-      \resumeItemListEnd
+       \resumeSubItemListStart
+       		\resumeSubItem{Integrated Google app with OEMs like Samsung, OnePlus, Vivo that made Google Discover just a swipe away on the homescreen(\href{https://www.xda-developers.com/oneplus-launcher-4-5-6-adds-toggle-between-google-discover-oneplus-shelf/}{XDA link}). This project helped land Google Discover on 1B new devices.}
+       \resumeSubItem{Worked on solving procrastination in LaMDA responses. Worked on the data-collection and BERT finetuning. The model identifies procrastination with an ROC AUC of 0.988.}
+              \resumeSubItemListEnd
     \resumeSubheading
-      {Arcesium India Pvt Ltd}{Hyderabad, India}
-      {Technical Lead/Senior Backend Engineer}{July 2015 -- August 2019}
-      \resumeItemListStart
-        \resumeItem{Software Architect}
-          {Designed and implemented backend applications. Developed and maintained an in-house framework called Frames which is used throughout the firm for exposing Java services RESTfully and to generate client stubs in C\#, Python and Java.}
-        \resumeItem{Site Reliability Engineer}
-          {Owned two of the most critical applications in the firm namely Moss and Ivy. Responsibilities included keeping code healthy, ensuring that the SLOs are met. Triaged several issues spanning across memory leaks both JVM and native memory, network, authentication, garbage collection and query optimization. Created a health monitoring that unregisters unhealthy apps from the cluster.}
-        \resumeItem{Test Automation}
-          {Created a test framework which automated the testing of .NET client RPC. This made the tests independent of data and thus more reliable. It also reduced the effort spent on writing new tests to almost zero.}
-        \resumeItem{Mentorship - Cloud}{Conducted seminars to educate the team about adopting Cloud ecosystem. Gave presentations on cloud technologies like Docker, Kubernetes, Istio and Knative.}
-        \resumeItem{Postgres Evaluation}
-          {Evaluated Postgres Aurora to make a recommendation to the firm regarding moving from Microsoft SQL Server to Postgres and devised a strategy for the firm to implement the move.}
-    \resumeItemListEnd
+      {Arcesium}{Hyderabad, India}
+      {Tech Lead/Backend Engineer}{July 2015 -- August 2019}
+        \resumeSubItemListStart
+          \resumeSubItem{Owned an in-house RPC framework called Frames that is used throughout the firm.}
+          \resumeSubItem{Owned two of the most critical applications in the firm namely Moss and Ivy. Responsibilities included keeping code healthy, ensuring that the availability SLOs are met. Triaged several issues spanning across memory leaks both JVM and native memory, network, authentication, garbage collection and query optimization.
+          }
+          \resumeSubItem{ Evaluated AWS Aurora and devised a strategy for the firm to move from MSSQL Server to Aurora.
+          }
+      \resumeSubItem{Conducted seminars to educate the team about adopting Cloud ecosystem. Gave presentations on cloud technologies like Docker, Kubernetes, Istio and Knative.}
+          \resumeSubItemListEnd
 
     \resumeSubheading
       {D. E. Shaw \& Co.}{Hyderabad, India}
       {Senior Software Engineer}{July 2012 -- June 2015}
-      \resumeItemListStart
-        \resumeItem{Pricing Add-In}
-          {Migrated the private equity model code which was written in VBA to a .Net Excel Add-In. This project had lingered on for two years. I wrote it from scratch and the add-in was delivered in a couple of months.}
-        \resumeItem{Performance Engineer}
-         {A self-driven initiative, where I improved the build time of an app from three minutes to less than a minute and made the build more reliable. This led to productivity gains for the 60 developers who work on it.
-         	Another self-initiative that improved the asset pricing latency throughput by up to 400\%.}
-      \resumeItemListEnd
+        \resumeSubItemListStart
+       \resumeSubItem{Improved the build time of an app from three minutes to less than a minute and made the build more reliable. This led to productivity gains for the 60 developers who work on it.}
+         \resumeSubItem{Improved the asset pricing latency throughput by up to 400\% by increasing the degree of concurrency.}
+          \resumeSubItem{Migrated the pricing models written in VBA to C\#. }
+      \resumeSubItemListEnd
   \resumeSubHeadingListEnd
 
 
 %--------PROGRAMMING SKILLS------------
-\section{Programming Skills}
+\section{Languages / Skills}
   \resumeSubHeadingListStart
     \item{
-      \textbf{Languages}{: Java, C\#, Python, C++, SQL}     
+      \textbf{Languages}{: Java, C\#, Python, C++, SQL}
     }
     \item{
       \textbf{Machine Learning}{: TensorFlow, AutoTFX, Keras, Pandas}
@@ -150,7 +137,7 @@
       \textbf{Test Frameworks}{: JUnit, Mockito, TestContainers}
     }
   \resumeSubHeadingListEnd
-  
+
 \section{Courses \& Certifications}
  \resumeSubHeadingListStart
  \item{
@@ -169,15 +156,13 @@
   }
  \resumeSubHeadingListEnd
 
-\section{Achievements}
-  \resumeSubHeadingListStart
-    \item{
-      Was promoted to the Senior Member Technical and Technical Lead roles in D. E. Shaw and Arcesium in the shortest possible time.
-    }
-    \item{
-      Won the hackathon organized by Arcesium in 2017 and 2018.
-    }
-  \resumeItemListEnd
+%-----------EDUCATION-----------------
+\section{Education}
+\resumeSubHeadingListStart
+\resumeSubheading
+{National Institute of Technology }{Warangal, India}
+{Bachelor of Technology in Computer Science and Engineering; CGPA: 9.17/10}{July 2008 -- April 2012}
+\resumeSubHeadingListEnd
 
 %-------------------------------------------
 \end{document}
